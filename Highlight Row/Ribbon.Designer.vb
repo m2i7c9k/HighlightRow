@@ -45,6 +45,10 @@
         Me.grpHighlighter = Me.Factory.CreateRibbonGroup
         Me.chbHighlightColumn = Me.Factory.CreateRibbonCheckBox
         Me.chbCopyCell = Me.Factory.CreateRibbonCheckBox
+        Me.chbTurnOff = Me.Factory.CreateRibbonCheckBox
+        Me.cmdColorDialog = Me.Factory.CreateRibbonButton
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.Separator1 = Me.Factory.CreateRibbonSeparator
         Me.Tab1.SuspendLayout()
         Me.grpHighlighter.SuspendLayout()
         Me.SuspendLayout()
@@ -60,6 +64,9 @@
         '
         Me.grpHighlighter.Items.Add(Me.chbHighlightColumn)
         Me.grpHighlighter.Items.Add(Me.chbCopyCell)
+        Me.grpHighlighter.Items.Add(Me.chbTurnOff)
+        Me.grpHighlighter.Items.Add(Me.Separator1)
+        Me.grpHighlighter.Items.Add(Me.cmdColorDialog)
         Me.grpHighlighter.Label = "Highlighter"
         Me.grpHighlighter.Name = "grpHighlighter"
         '
@@ -72,6 +79,23 @@
         '
         Me.chbCopyCell.Label = "Copy Cell"
         Me.chbCopyCell.Name = "chbCopyCell"
+        '
+        'chbTurnOff
+        '
+        Me.chbTurnOff.Label = "Turn Off"
+        Me.chbTurnOff.Name = "chbTurnOff"
+        '
+        'cmdColorDialog
+        '
+        Me.cmdColorDialog.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge
+        Me.cmdColorDialog.Image = Global.Highlight_Row.My.Resources.Resources.Color_Spot_Color_32x32_scale_100
+        Me.cmdColorDialog.Label = "Color"
+        Me.cmdColorDialog.Name = "cmdColorDialog"
+        Me.cmdColorDialog.ShowImage = True
+        '
+        'Separator1
+        '
+        Me.Separator1.Name = "Separator1"
         '
         'Ribbon
         '
@@ -90,6 +114,10 @@
     Friend WithEvents grpHighlighter As Microsoft.Office.Tools.Ribbon.RibbonGroup
     Friend WithEvents chbHighlightColumn As Microsoft.Office.Tools.Ribbon.RibbonCheckBox
     Friend WithEvents chbCopyCell As Microsoft.Office.Tools.Ribbon.RibbonCheckBox
+    Friend WithEvents chbTurnOff As Microsoft.Office.Tools.Ribbon.RibbonCheckBox
+    Friend WithEvents cmdColorDialog As Microsoft.Office.Tools.Ribbon.RibbonButton
+    Friend WithEvents ColorDialog1 As Windows.Forms.ColorDialog
+    Friend WithEvents Separator1 As Microsoft.Office.Tools.Ribbon.RibbonSeparator
 End Class
 
 Partial Class ThisRibbonCollection

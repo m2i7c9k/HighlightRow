@@ -76,6 +76,30 @@ Partial Friend NotInheritable Class MySettings
             Me("highlightColumn") = value
         End Set
     End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+    Public Property turnOffHighlight() As Integer
+        Get
+            Return CType(Me("turnOffHighlight"),Integer)
+        End Get
+        Set
+            Me("turnOffHighlight") = value
+        End Set
+    End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("Red")>  _
+    Public Property highlightColor() As Global.System.Drawing.Color
+        Get
+            Return CType(Me("highlightColor"),Global.System.Drawing.Color)
+        End Get
+        Set
+            Me("highlightColor") = value
+        End Set
+    End Property
 End Class
 
 Namespace My
