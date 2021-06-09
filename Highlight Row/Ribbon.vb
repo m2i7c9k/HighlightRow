@@ -63,21 +63,6 @@ Public Class Ribbon
         End If
         My.Settings.Save()
     End Sub
-
-    'Private Sub chbTurnOff_Click(sender As Object, e As RibbonControlEventArgs) Handles chbTurnOff.Click
-    '    'utorok, 08 júna 2021, 22:23:30
-    '    If chbTurnOff.Checked Then
-    '        My.Settings.turnOffHighlight = 1
-    '        Dim xlApp As Excel.Application = Globals.ThisAddIn.Application
-    '        Dim rng As Excel.Range = TryCast(Globals.ThisAddIn.Application.Cells, Excel.Range)
-    '        xlApp.CutCopyMode = False
-    '        rng.Cells.Interior.ColorIndex = Microsoft.Office.Core.XlColorIndex.xlColorIndexNone
-    '    Else
-    '        My.Settings.turnOffHighlight = 0
-    '    End If
-    '    My.Settings.Save()
-    'End Sub
-
     Private Sub Button1_Click(sender As Object, e As RibbonControlEventArgs) Handles cmdColorDialog.Click
         'utorok, 08 júna 2021, 23:01:07
         Dim ColorDialog As New ColorDialog With {

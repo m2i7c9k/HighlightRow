@@ -46,7 +46,6 @@
         Me.chbHighlightColumn = Me.Factory.CreateRibbonCheckBox
         Me.chbCopyCell = Me.Factory.CreateRibbonCheckBox
         Me.tgbTurnOffAddin = Me.Factory.CreateRibbonToggleButton
-        Me.chbTurnOff = Me.Factory.CreateRibbonCheckBox
         Me.Separator1 = Me.Factory.CreateRibbonSeparator
         Me.cmdColorDialog = Me.Factory.CreateRibbonButton
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
@@ -66,7 +65,6 @@
         Me.grpHighlighter.Items.Add(Me.chbHighlightColumn)
         Me.grpHighlighter.Items.Add(Me.chbCopyCell)
         Me.grpHighlighter.Items.Add(Me.tgbTurnOffAddin)
-        Me.grpHighlighter.Items.Add(Me.chbTurnOff)
         Me.grpHighlighter.Items.Add(Me.Separator1)
         Me.grpHighlighter.Items.Add(Me.cmdColorDialog)
         Me.grpHighlighter.Label = "Highlighter"
@@ -88,12 +86,6 @@
         Me.tgbTurnOffAddin.Label = "Turn Off"
         Me.tgbTurnOffAddin.Name = "tgbTurnOffAddin"
         Me.tgbTurnOffAddin.ShowImage = True
-        '
-        'chbTurnOff
-        '
-        Me.chbTurnOff.Label = "Turn Off"
-        Me.chbTurnOff.Name = "chbTurnOff"
-        Me.chbTurnOff.Visible = False
         '
         'Separator1
         '
@@ -124,7 +116,6 @@
     Friend WithEvents grpHighlighter As Microsoft.Office.Tools.Ribbon.RibbonGroup
     Friend WithEvents chbHighlightColumn As Microsoft.Office.Tools.Ribbon.RibbonCheckBox
     Friend WithEvents chbCopyCell As Microsoft.Office.Tools.Ribbon.RibbonCheckBox
-    Friend WithEvents chbTurnOff As Microsoft.Office.Tools.Ribbon.RibbonCheckBox
     Friend WithEvents cmdColorDialog As Microsoft.Office.Tools.Ribbon.RibbonButton
     Friend WithEvents ColorDialog1 As Windows.Forms.ColorDialog
     Friend WithEvents Separator1 As Microsoft.Office.Tools.Ribbon.RibbonSeparator
