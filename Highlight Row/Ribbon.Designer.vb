@@ -46,9 +46,10 @@
         Me.chbHighlightColumn = Me.Factory.CreateRibbonCheckBox
         Me.chbCopyCell = Me.Factory.CreateRibbonCheckBox
         Me.chbTurnOff = Me.Factory.CreateRibbonCheckBox
+        Me.Separator1 = Me.Factory.CreateRibbonSeparator
         Me.cmdColorDialog = Me.Factory.CreateRibbonButton
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
-        Me.Separator1 = Me.Factory.CreateRibbonSeparator
+        Me.tgbTurnOffAddin = Me.Factory.CreateRibbonToggleButton
         Me.Tab1.SuspendLayout()
         Me.grpHighlighter.SuspendLayout()
         Me.SuspendLayout()
@@ -65,6 +66,7 @@
         Me.grpHighlighter.Items.Add(Me.chbHighlightColumn)
         Me.grpHighlighter.Items.Add(Me.chbCopyCell)
         Me.grpHighlighter.Items.Add(Me.chbTurnOff)
+        Me.grpHighlighter.Items.Add(Me.tgbTurnOffAddin)
         Me.grpHighlighter.Items.Add(Me.Separator1)
         Me.grpHighlighter.Items.Add(Me.cmdColorDialog)
         Me.grpHighlighter.Label = "Highlighter"
@@ -85,6 +87,10 @@
         Me.chbTurnOff.Label = "Turn Off"
         Me.chbTurnOff.Name = "chbTurnOff"
         '
+        'Separator1
+        '
+        Me.Separator1.Name = "Separator1"
+        '
         'cmdColorDialog
         '
         Me.cmdColorDialog.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge
@@ -93,9 +99,11 @@
         Me.cmdColorDialog.Name = "cmdColorDialog"
         Me.cmdColorDialog.ShowImage = True
         '
-        'Separator1
+        'tgbTurnOffAddin
         '
-        Me.Separator1.Name = "Separator1"
+        Me.tgbTurnOffAddin.Label = "Turn Off"
+        Me.tgbTurnOffAddin.Name = "tgbTurnOffAddin"
+        Me.tgbTurnOffAddin.ShowImage = True
         '
         'Ribbon
         '
@@ -118,6 +126,7 @@
     Friend WithEvents cmdColorDialog As Microsoft.Office.Tools.Ribbon.RibbonButton
     Friend WithEvents ColorDialog1 As Windows.Forms.ColorDialog
     Friend WithEvents Separator1 As Microsoft.Office.Tools.Ribbon.RibbonSeparator
+    Friend WithEvents tgbTurnOffAddin As Microsoft.Office.Tools.Ribbon.RibbonToggleButton
 End Class
 
 Partial Class ThisRibbonCollection
