@@ -69,6 +69,8 @@ Public Class Ribbon
             .Color = My.Settings.highlightColor
         }
 
+        ColorDialog.FullOpen = True
+
         If (ColorDialog.ShowDialog() = DialogResult.OK) Then
             My.Settings.highlightColor = ColorDialog.Color
             My.Settings.Save()
