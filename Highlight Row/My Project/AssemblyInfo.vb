@@ -12,8 +12,8 @@ Imports System.Security
 <Assembly: AssemblyTitle("Highlight Row")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("Highlight Row")> 
-<Assembly: AssemblyCopyright("Copyright ©  2021")> 
+<Assembly: AssemblyProduct("Highlight Row")>
+<Assembly: AssemblyCopyright("Copyright © Mick Walker, The Writer 2021")>
 <Assembly: AssemblyTrademark("")> 
 
 ' Setting ComVisible to false makes the types in this assembly not visible 

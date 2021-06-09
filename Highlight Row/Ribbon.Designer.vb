@@ -45,11 +45,11 @@
         Me.grpHighlighter = Me.Factory.CreateRibbonGroup
         Me.chbHighlightColumn = Me.Factory.CreateRibbonCheckBox
         Me.chbCopyCell = Me.Factory.CreateRibbonCheckBox
+        Me.tgbTurnOffAddin = Me.Factory.CreateRibbonToggleButton
         Me.chbTurnOff = Me.Factory.CreateRibbonCheckBox
         Me.Separator1 = Me.Factory.CreateRibbonSeparator
         Me.cmdColorDialog = Me.Factory.CreateRibbonButton
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
-        Me.tgbTurnOffAddin = Me.Factory.CreateRibbonToggleButton
         Me.Tab1.SuspendLayout()
         Me.grpHighlighter.SuspendLayout()
         Me.SuspendLayout()
@@ -65,8 +65,8 @@
         '
         Me.grpHighlighter.Items.Add(Me.chbHighlightColumn)
         Me.grpHighlighter.Items.Add(Me.chbCopyCell)
-        Me.grpHighlighter.Items.Add(Me.chbTurnOff)
         Me.grpHighlighter.Items.Add(Me.tgbTurnOffAddin)
+        Me.grpHighlighter.Items.Add(Me.chbTurnOff)
         Me.grpHighlighter.Items.Add(Me.Separator1)
         Me.grpHighlighter.Items.Add(Me.cmdColorDialog)
         Me.grpHighlighter.Label = "Highlighter"
@@ -82,10 +82,18 @@
         Me.chbCopyCell.Label = "Copy Cell"
         Me.chbCopyCell.Name = "chbCopyCell"
         '
+        'tgbTurnOffAddin
+        '
+        Me.tgbTurnOffAddin.Image = Global.Highlight_Row.My.Resources.Resources.TurnOn
+        Me.tgbTurnOffAddin.Label = "Turn Off"
+        Me.tgbTurnOffAddin.Name = "tgbTurnOffAddin"
+        Me.tgbTurnOffAddin.ShowImage = True
+        '
         'chbTurnOff
         '
         Me.chbTurnOff.Label = "Turn Off"
         Me.chbTurnOff.Name = "chbTurnOff"
+        Me.chbTurnOff.Visible = False
         '
         'Separator1
         '
@@ -98,12 +106,6 @@
         Me.cmdColorDialog.Label = "Color"
         Me.cmdColorDialog.Name = "cmdColorDialog"
         Me.cmdColorDialog.ShowImage = True
-        '
-        'tgbTurnOffAddin
-        '
-        Me.tgbTurnOffAddin.Label = "Turn Off"
-        Me.tgbTurnOffAddin.Name = "tgbTurnOffAddin"
-        Me.tgbTurnOffAddin.ShowImage = True
         '
         'Ribbon
         '
