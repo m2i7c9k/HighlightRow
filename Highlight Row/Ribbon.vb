@@ -103,4 +103,5 @@ Public Class Ribbon
         End If
         My.Settings.Save()
     End Sub
+
 End Class
