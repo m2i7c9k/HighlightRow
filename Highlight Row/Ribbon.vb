@@ -28,14 +28,16 @@ Public Class Ribbon
             'Add-inis On
             Globals.Ribbons.Ribbon.tgbTurnOffAddin.Checked = True
             With tgbTurnOffAddin
-                .Image = My.Resources.TurnOn
+                '.Image = My.Resources.TurnOn
                 .Label = "Turned On"
+                .OfficeImageId = "AcceptInvitation"
             End With
         Else
             'Add-in is Off
             Globals.Ribbons.Ribbon.tgbTurnOffAddin.Checked = False
             With tgbTurnOffAddin
-                .Image = My.Resources.TurnOff
+                '.Image = My.Resources.TurnOff
+                .OfficeImageId = "DeclineInvitation"
                 .Label = "Turned Off"
             End With
         End If
@@ -63,11 +65,10 @@ Public Class Ribbon
         End If
         My.Settings.Save()
     End Sub
+
     Private Sub Button1_Click(sender As Object, e As RibbonControlEventArgs) Handles cmdColorDialog.Click
         'utorok, 08 júna 2021, 23:01:07
-        Dim ColorDialog As New ColorDialog With {
-            .Color = My.Settings.highlightColor
-        }
+        Dim ColorDialog As New ColorDialog With {.Color = My.Settings.highlightColor}
 
         ColorDialog.FullOpen = True
 
@@ -83,8 +84,9 @@ Public Class Ribbon
             'Add-in Off
             My.Settings.turnOffHighlight = 0
             With tgbTurnOffAddin
-                .Image = My.Resources.TurnOn
+                '.Image = My.Resources.TurnOn
                 .Label = "Turned On"
+                .OfficeImageId = "AcceptInvitation"
             End With
         Else
             'Add-in On
@@ -92,12 +94,14 @@ Public Class Ribbon
 
             Dim xlApp As Excel.Application = Globals.ThisAddIn.Application
             Dim rng As Excel.Range = TryCast(Globals.ThisAddIn.Application.Cells, Excel.Range)
+
             xlApp.CutCopyMode = False
             rng.Cells.Interior.ColorIndex = Microsoft.Office.Core.XlColorIndex.xlColorIndexNone
 
             With tgbTurnOffAddin
-                .Image = My.Resources.TurnOff
+                '.Image = My.Resources.TurnOff
                 .Label = "Turned Off"
+                .OfficeImageId = "DeclineInvitation"
             End With
 
         End If

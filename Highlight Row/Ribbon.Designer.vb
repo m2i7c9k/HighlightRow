@@ -45,10 +45,10 @@
         Me.grpHighlighter = Me.Factory.CreateRibbonGroup
         Me.chbHighlightColumn = Me.Factory.CreateRibbonCheckBox
         Me.chbCopyCell = Me.Factory.CreateRibbonCheckBox
-        Me.tgbTurnOffAddin = Me.Factory.CreateRibbonToggleButton
         Me.Separator1 = Me.Factory.CreateRibbonSeparator
-        Me.cmdColorDialog = Me.Factory.CreateRibbonButton
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.tgbTurnOffAddin = Me.Factory.CreateRibbonToggleButton
+        Me.cmdColorDialog = Me.Factory.CreateRibbonButton
         Me.Tab1.SuspendLayout()
         Me.grpHighlighter.SuspendLayout()
         Me.SuspendLayout()
@@ -80,16 +80,17 @@
         Me.chbCopyCell.Label = "Copy Cell"
         Me.chbCopyCell.Name = "chbCopyCell"
         '
-        'tgbTurnOffAddin
-        '
-        Me.tgbTurnOffAddin.Image = Global.Highlight_Row.My.Resources.Resources.TurnOn
-        Me.tgbTurnOffAddin.Label = "Turn Off"
-        Me.tgbTurnOffAddin.Name = "tgbTurnOffAddin"
-        Me.tgbTurnOffAddin.ShowImage = True
-        '
         'Separator1
         '
         Me.Separator1.Name = "Separator1"
+        '
+        'tgbTurnOffAddin
+        '
+        Me.tgbTurnOffAddin.Label = "Turn Off"
+        Me.tgbTurnOffAddin.Name = "tgbTurnOffAddin"
+        Me.tgbTurnOffAddin.OfficeImageId = "AcceptInvitation"
+        Me.tgbTurnOffAddin.ScreenTip = "Turn off Row Highliter addin."
+        Me.tgbTurnOffAddin.ShowImage = True
         '
         'cmdColorDialog
         '
